@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.headline {
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 2rem;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+.btn {
+    background-color: #3b82f6;
+    color: #fff;
+    font-weight: 700;
+    font-size: large;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.25rem;
+    margin: 0.5rem;
+    margin-bottom: 1rem;
+    width: 16rem;
+    align-self: center;
+    cursor: pointer;
+}
+.hidden {
+    display: none;
+}
+video-player-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    width: 80%;
+    display: grid !important;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+video-player-container:has(> :nth-child(2)) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+video-player-container:has(> :nth-child(5)) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+video-player {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
